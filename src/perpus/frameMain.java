@@ -606,14 +606,15 @@ public class frameMain extends javax.swing.JFrame {
                 String Alamat = rs.getString(3);
                 String JenisBuku = rs.getString(4);
                 String JudulBuku = rs.getString(5);
-                String Denda = rs.getString(6);
+                String LamaPinjam = rs.getString(6);
+                String Denda = rs.getString(7);
                 String Status = "";
-                if("Belum Kembali".equals(rs.getString(3))){
+                if("Belum Kembali".equals(rs.getString(9))){
                     Status = "Belum Kembali";
                 }else{
                     Status = "Kembali";
                 }
-                String data[] = {NoAnggota,Nama,Alamat,JenisBuku,JudulBuku,Denda,Status};
+                String data[] = {NoAnggota,Nama,Alamat,JenisBuku,JudulBuku,LamaPinjam,Denda,Status};
                 dtm.addRow(data);
             }
         }catch(SQLException ex){
