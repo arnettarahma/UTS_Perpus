@@ -459,7 +459,7 @@ public class frameMain extends javax.swing.JFrame {
                         Logger.getLogger(frameMain.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }else{
-                    JOptionPane.showMessageDialog(this, "Data Berhasil Disimpan","Sukses",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Data Gagal Disimpan","Gagal",JOptionPane.WARNING_MESSAGE);
                 }
         }
     }//GEN-LAST:event_saveActionPerformed
