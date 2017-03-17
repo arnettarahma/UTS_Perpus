@@ -595,7 +595,7 @@ public class frameMain extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void selectData() throws SQLException {
-        String kolom[] = {"NoAnggota","Nama","Alamat","JenisBuku","JudulBuku","Denda","Status"};
+        String kolom[] = {"NoAnggota","Nama","Alamat","JenisBuku","JudulBuku","LamaPinjam","Denda","Status"};
         DefaultTableModel dtm = new DefaultTableModel(null, kolom);
         String SQL = "SELECT * FROM pengembalian";
         ResultSet rs = KoneksiDB.executeQuery(SQL);
@@ -609,7 +609,7 @@ public class frameMain extends javax.swing.JFrame {
                 String LamaPinjam = rs.getString(6);
                 String Denda = rs.getString(7);
                 String Status = "";
-                if("Belum Kembali".equals(rs.getString(9))){
+                if("Belum Kembali".equals(rs.getString(8))){
                     Status = "Belum Kembali";
                 }else{
                     Status = "Kembali";
