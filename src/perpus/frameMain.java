@@ -448,8 +448,8 @@ public class frameMain extends javax.swing.JFrame {
                 String SQL = "INSERT INTO pengembalian (NoAnggota,NamaPeminjam,Alamat,JenisBuku,JudulBuku,LamaPinjam,Denda,Status)"
                         +"VALUE('"+no.getText()+"','"+nama.getText()+"',"
                         + "'"+alamat.getText()+"','"+jenisbuku+"',"
-                        + "'"+lama.getText()+"','"
-                        + "'"+judul.getText()+"','"+denda.getText()+"','"+Status+"')";
+                        + "'"+lama.getText()+"',"
+                        + "'"+judul.getText()+"',"+denda.getText()+"',"+Status+"')";
                 int status = KoneksiDB.execute(SQL);
                 if(status==1){
                     JOptionPane.showMessageDialog(this, "Data Berhasil Disimpan","Sukses",JOptionPane.INFORMATION_MESSAGE);
